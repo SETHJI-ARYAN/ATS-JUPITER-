@@ -1,0 +1,153 @@
+
+Microsoft Windows [Version 10.0.22621.2506]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Aryan>pip install docx2txt
+Collecting docx2txt
+  Downloading docx2txt-0.8.tar.gz (2.8 kB)
+  Preparing metadata (setup.py) ... done
+Installing collected packages: docx2txt
+  DEPRECATION: docx2txt is being installed using the legacy 'setup.py install' method, because it does not have a 'pyproject.toml' and the 'wheel' package is not installed. pip 23.1 will enforce this behaviour change. A possible replacement is to enable the '--use-pep517' option. Discussion can be found at https://github.com/pypa/pip/issues/8559
+  Running setup.py install for docx2txt ... error
+  error: subprocess-exited-with-error
+
+  × Running setup.py install for docx2txt did not run successfully.
+  │ exit code: 1
+  ╰─> [35 lines of output]
+      C:\Python311\Lib\site-packages\setuptools\dist.py:771: UserWarning: Usage of dash-separated 'description-file' will not be supported in future versions. Please use the underscore name 'description_file' instead
+        warnings.warn(
+      running install
+      C:\Python311\Lib\site-packages\setuptools\command\install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+        warnings.warn(
+      running build
+      running build_py
+      creating build
+      creating build\lib
+      creating build\lib\docx2txt
+      copying docx2txt\docx2txt.py -> build\lib\docx2txt
+      copying docx2txt\__init__.py -> build\lib\docx2txt
+      running build_scripts
+      creating build\scripts-3.11
+      copying and adjusting bin\docx2txt -> build\scripts-3.11
+      running install_lib
+      creating C:\Python311\Lib\site-packages\docx2txt
+      copying build\lib\docx2txt\docx2txt.py -> C:\Python311\Lib\site-packages\docx2txt
+      copying build\lib\docx2txt\__init__.py -> C:\Python311\Lib\site-packages\docx2txt
+      byte-compiling C:\Python311\Lib\site-packages\docx2txt\docx2txt.py to docx2txt.cpython-311.pyc
+      byte-compiling C:\Python311\Lib\site-packages\docx2txt\__init__.py to __init__.cpython-311.pyc
+      running install_egg_info
+      running egg_info
+      creating docx2txt.egg-info
+      writing docx2txt.egg-info\PKG-INFO
+      writing dependency_links to docx2txt.egg-info\dependency_links.txt
+      writing top-level names to docx2txt.egg-info\top_level.txt
+      writing manifest file 'docx2txt.egg-info\SOURCES.txt'
+      reading manifest file 'docx2txt.egg-info\SOURCES.txt'
+      adding license file 'LICENSE.txt'
+      writing manifest file 'docx2txt.egg-info\SOURCES.txt'
+      Copying docx2txt.egg-info to C:\Python311\Lib\site-packages\docx2txt-0.8-py3.11.egg-info
+      running install_scripts
+      copying build\scripts-3.11\docx2txt -> C:\Python311\Scripts
+      error: could not create 'C:\Python311\Scripts\docx2txt': Permission denied
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: legacy-install-failure
+
+× Encountered error while trying to install package.
+╰─> docx2txt
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for output from the failure.
+
+[notice] A new release of pip available: 22.3 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\Aryan>pip install warnings
+ERROR: Could not find a version that satisfies the requirement warnings (from versions: none)
+ERROR: No matching distribution found for warnings
+
+[notice] A new release of pip available: 22.3 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\Aryan>pip3 install warnings
+ERROR: Could not find a version that satisfies the requirement warnings (from versions: none)
+ERROR: No matching distribution found for warnings
+
+[notice] A new release of pip available: 22.3 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\Aryan>python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\python311\lib\site-packages (22.3)
+Collecting pip
+  Downloading pip-23.3.1-py3-none-any.whl (2.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 479.3 kB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 22.3
+    Uninstalling pip-22.3:
+ERROR: Could not install packages due to an OSError: [WinError 5] Access is denied: 'c:\\python311\\lib\\site-packages\\pip-22.3.dist-info\\entry_points.txt'
+Consider using the `--user` option or check the permissions.
+
+
+[notice] A new release of pip available: 22.3 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\Aryan>pip install warningss
+ERROR: Could not find a version that satisfies the requirement warningss (from versions: none)
+ERROR: No matching distribution found for warningss
+
+[notice] A new release of pip available: 22.3 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\Aryan>pip install cosine similarity
+ERROR: Could not find a version that satisfies the requirement cosine (from versions: none)
+ERROR: No matching distribution found for cosine
+
+[notice] A new release of pip available: 22.3 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\Aryan>python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\python311\lib\site-packages (22.3)
+Collecting pip
+  Using cached pip-23.3.1-py3-none-any.whl (2.1 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 22.3
+    Uninstalling pip-22.3:
+ERROR: Could not install packages due to an OSError: [WinError 5] Access is denied: 'c:\\python311\\lib\\site-packages\\pip-22.3.dist-info\\entry_points.txt'
+Consider using the `--user` option or check the permissions.
+
+
+[notice] A new release of pip available: 22.3 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\Aryan>pip install cosine_similarity
+Collecting cosine_similarity
+  Downloading cosine_similarity-0.1.2-py3-none-any.whl (5.1 kB)
+Installing collected packages: cosine_similarity
+Successfully installed cosine_similarity-0.1.2
+
+[notice] A new release of pip available: 22.3 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\Aryan>run: python.exe -m pip install --upgrade pip
+'run:' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Aryan>python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\python311\lib\site-packages (22.3)
+Collecting pip
+  Using cached pip-23.3.1-py3-none-any.whl (2.1 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 22.3
+    Uninstalling pip-22.3:
+ERROR: Could not install packages due to an OSError: [WinError 5] Access is denied: 'c:\\python311\\lib\\site-packages\\pip-22.3.dist-info\\entry_points.txt'
+Consider using the `--user` option or check the permissions.
+
+
+[notice] A new release of pip available: 22.3 -> 23.3.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\Aryan>

@@ -1,0 +1,82 @@
+'''
+
+project name : shinzo abe tweeter sentiments
+author : @kanishksh4rma
+
+'''
+​
+project name : shinzo abe tweeter sentiments
+author : @kanishksh4rma
+​
+'''
+'\n\nproject name : shinzo abe tweeter sentiments\nauthor : @kanishksh4rma\n\n'
+#intall the required library
+#!pip install docx2txt
+!python.exe -m pip install --upgrade pip
+!pip install cosine_similarity 
+​
+import docx2txt
+import warnings
+warnings.filterwarnings('ignore')
+Requirement already satisfied: pip in c:\users\aryan\anaconda3\lib\site-packages (23.2.1)
+Collecting pip
+  Obtaining dependency information for pip from https://files.pythonhosted.org/packages/47/6a/453160888fab7c6a432a6e25f8afe6256d0d9f2cbd25971021da6491d899/pip-23.3.1-py3-none-any.whl.metadata
+  Downloading pip-23.3.1-py3-none-any.whl.metadata (3.5 kB)
+Using cached pip-23.3.1-py3-none-any.whl (2.1 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.2.1
+    Uninstalling pip-23.2.1:
+      Successfully uninstalled pip-23.2.1
+Successfully installed pip-23.3.1
+Collecting cosine_similarity
+  Downloading cosine_similarity-0.1.2-py3-none-any.whl (5.1 kB)
+Installing collected packages: cosine_similarity
+Successfully installed cosine_similarity-0.1.2
+# load the data
+resume = docx2txt.process('python-sample-resume.docx')
+job = docx2txt.process('python-job-description.docx')
+# printing the resume
+resume
+'Loren Brekke \n\n9873 Ignacio Corners Boston \n\nMA \n\nPhone +1 (555) 570 0033 \n\n\n\nExperience \n\nHouston, TX \n\nPython Applications Developer \n\n10/2015 – present \n\n\t\tHelp set development standards in areas of best practices, code quality, test coverage, monitoring, logging, exception management, and others\n\n\t\tBecome proficient in Python, and the Athena platform’s NoSql OO database, graph-oriented development model and developer toolset\n\n\t\tPerform unit testing and system integration testing of the newly developed functionality\n\n\t\tCreate technical design recommendations for developing and integrating programs per written specifications\n\n\t\tConduct code reviews on components and applications to ensure adherence to the development standards and best practices\n\n\t\tImprove SDLC\n\n\t\tIntegrate various systems to improve efficiency\n\nLos Angeles, CA \n\nPython Application Developer \n\n02/2013 – 08/2015 \n\n\t\tExecute change management activities supporting production deployment to Developers, Quality Control Analysts, and Environment Management personnel\n\n\t\tKnowledge of software development life cycle and agile development practices\n\n\t\tStrong knowledge of Spring frameworks and leveraging distributed data caching frameworks\n\n\t\tProvide guidance and oversight to development teams across Capital technology\n\n\t\tWorking with production support teams to ensure smooth transition of software developed\n\n\t\tDevelop code for intermediate to complex modules, following documentation and development standards\n\n\t\tWork with the development team to facilitate the Build effort and to ensure successful end-to-End integration / testing\n\nChicago, IL \n\nPython \n\n12/2005 – 09/2012 \n\n\t\tWork with production support teams to ensure smooth transition of software developed\n\n\t\tWork in an environment which encourages and promotes personal development\n\n\t\tProvide design recommendations, developing and integrating programs per high level specifications\n\n\t\tLiaise with other teams and providers\n\n\t\tBe an active part of a larger internal open source community of developers at Hearst\n\n\t\tDeveloping a world-class, machine learning-driven recommendation and personalization system to match our users with jobs\n\n\t\tUnderstand the project scope, identify activities/ tasks, task level estimates, schedule, dependencies, risks and provide inputs to Module Lead for review\n\nEducation \n\nBachelor’s Degree in Computer Science \n\nKent State University \n\nSkills \n\n\t\tFront-office/risk management business knowledge as well as Knowledge of financial instrument features and trade processing would be a definite \n\n\t\tStrong analytical ability \n\n\t\tAble to react quickly and perform well under stress and high demand \n\n\t\tWorking Excel knowledge including VBA, pivot tables, formulas \n\n\t\tProven strong experience with databases ( columnar, nosql and RDMS ) and good SQL skills \n\n\t\tWillingness to take ownership of tasks and the ability to work on their own initiative while being a strong team player \n\n\t\tExcellent verbal and written communication skills, able to communicate accurately, concisely and with tact and diplomacy when appropriate \n\n\t\tDevelop a good understanding of End to End business processes and the associated technical blocks \n\n\t\tEquities business knowledge is an advantage but other relevant experience in other business areas is welcomed \n\n\t\tThe ability to work under pressure within agreed timelines and to support multiple tasks in parallel'
+#print the job description
+job
+'Python Developer responsibilities include:\n\n\t\tWriting effective, scalable code \n\n\t\tDeveloping back-end components to improve responsiveness and overall performance \n\n\t\tIntegrating user-facing elements into applications \n\nJob brief\n\nWe are looking for a Python Developer to join our engineering team and help us develop and maintain various software products.\n\nPython Developer responsibilities include writing and testing code, debugging programs and integrating applications with third-party web services. To be successful in this role, you should have experience using server-side logic and work well in a team.\n\nUltimately, you’ll build highly responsive web applications that align with our business needs.\n\nResponsibilities\n\n\t\tWrite effective, scalable code \n\n\t\tDevelop back-end components to improve responsiveness and overall performance \n\n\t\tIntegrate user-facing elements into applications \n\n\t\tTest and debug programs \n\n\t\tImprove functionality of existing systems \n\n\t\tImplement security and data protection solutions \n\n\t\tAssess and prioritize feature requests \n\n\t\tCoordinate with internal teams to understand user requirements and provide technical solutions \n\nRequirements\n\n\t\tWork experience as a Python Developer \n\n\t\tExpertise in at least one popular Python framework (like Django, Flask or Pyramid) \n\n\t\tKnowledge of object-relational mapping (ORM) \n\n\t\tFamiliarity with front-end technologies (like JavaScript and HTML5) \n\n\t\tTeam spirit \n\n\t\tGood problem-solving skills \n\n\t\tBSc in Computer Science, Engineering or relevant field'
+# a list of text
+​
+text = [resume,job]
+from sklearn.feature_extraction.text import CountVectorizer
+​
+cv = CountVectorizer()
+count_matrix = cv.fit_transform(text)
+#
+import cosine_similarity 
+​
+from sklearn.metrics.pairwise import cosine_similarity
+#cosine_similarity =[]
+#print (cosine_similarity)
+​
+​
+print('Similarity score : ',cosine_similarity(count_matrix))
+---------------------------------------------------------------------------
+ModuleNotFoundError                       Traceback (most recent call last)
+Cell In[24], line 1
+----> 1 import cosine_similarity 
+      3 from sklearn.metrics.pairwise import cosine_similarity
+      4 cosine_similarity =[]
+
+ModuleNotFoundError: No module named 'cosine_similarity'
+
+# get the percentage
+matchpercentage = cosine_similarity(count_matrix)[0][1]
+matchpercentage = round(matchpercentage*100,2)
+print('Your Resume {} % match to the job description !'.format(matchpercentage))
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+Cell In[25], line 2
+      1 # get the percentage
+----> 2 matchpercentage = cosine_similarity(count_matrix)[0][1]
+      3 matchpercentage = round(matchpercentage*100,2)
+      4 print('Your Resume {} % match to the job description !'.format(matchpercentage))
+
+NameError: name 'cosine_similarity' is not defined 
